@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     background-color: rgb(59, 43, 70);
     font-family: Rockwell, "sans serif", serif;
     font-size: 16px;
@@ -35,8 +36,9 @@ ul {
     padding: 0;
   }
 a {
-    display: block;
-    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: grab;
 }
 
 ul.nav {
@@ -92,9 +94,8 @@ h2 {
   }
 section figure img {
     border-radius: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 #dog {
     border-radius: 15px;
@@ -102,6 +103,7 @@ section figure img {
 }
 p {
     padding-left: 25px;
+    padding-top: 10px;
 }
 .biography {
     display: flex;
@@ -111,7 +113,6 @@ p {
     display: flex;
     position: inherit;
     width: 100%;
-    border: 10px solid var(--l-purple);
     padding: 5px;
     margin: 5px;
 }
@@ -133,21 +134,31 @@ p {
 .project-box {
     position: inherit;
     float: right;
-    width: 700px;
+    width: 1000px;
     border: 10px none;
     padding: 20px;
     margin: 20px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  figure {
+    display: flex;
+    flex-basis: 20%;
+    min-height: 100px;
+    justify-content: space-around;
   }
 section ul {
       margin-left: 20px;
   }
 .contact-info {
         display: block;
-        left: 5;
-        bottom: 10;
-        width: 30%;
+        width: 25%;
         text-align: left;
-        border: 10px solid var(--l-purple);
         padding: 10px;
         margin-bottom: 20px;
         margin-top: 50px;
@@ -159,17 +170,28 @@ h3 {
     text-decoration-style: solid;
     padding: 0 0 10px;
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Footer 
 -------------------------*/
 .footer {
     display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     text-align: center;
-    border: 10px solid var(--l-purple);
-    border-top: 10px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .column {
+    width: 100%;
+  }
 }
